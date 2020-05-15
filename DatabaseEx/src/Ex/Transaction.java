@@ -30,14 +30,14 @@ public class Transaction {
 
             st.executeUpdate("INSERT INTO Authors(Id, Name) VALUES(20, 'Felipe Pomps');");
             st.executeUpdate("INSERT INTO Books(Id, AuthorId, Title) VALUES(21, 20, '1984');");
-            st.executeUpdate("INSERT INTO Books(Id, AuthorId, Title) VALUES(22, 20	, 'DescriçãoAnimal Farm');");
+            st.executeUpdate("INSERT INTO Books(Id, AuthorId, Title) VALUES(22, 20, 'DescriÃ§Ã£oAnimal Farm');");
 			
 
-			rs = st.executeQuery("SELECT Name, Title From Authors, Books WHERE Authors.Id=Books.AuthorId;");
+	    rs = st.executeQuery("SELECT Name, Title From Authors, Books WHERE Authors.Id=Books.AuthorId;");
 
-			while (rs.next()) {
-				System.out.println(rs.getString(1));
-			}
+	    while (rs.next()) {
+	    	System.out.println(rs.getString(1));
+	    }
 
             con.commit();
             
